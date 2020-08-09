@@ -1,0 +1,2455 @@
+@import url(fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+html {
+    font-size: 10px;
+    font-family: "Poppins Regular";
+    letter-spacing: 5%;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-prim: #D70A0A;
+}
+
+.container {
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: "Poppins Med";
+    font-size: 5rem;
+    margin: 10rem 0;
+}
+
+.titel {
+    font-family: "headtext";
+    letter-spacing: 0.5rem;
+    color: #333333;
+    font-size: 11rem;
+    transform: translateY(-4rem);
+    -webkit-transform: translateY(-4rem);
+    -moz-transform: translateY(-4rem);
+    -ms-transform: translateY(-4rem);
+    -o-transform: translateY(-4rem);
+}
+
+.display-none {
+    display: none;
+}
+
+.nav-active {
+    border-bottom: 0.5px solid var(--color-prim);
+}
+
+.btn-design {
+    font-size: 2rem;
+    border: 1px solid #333333;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    font-family: "Poppins Li";
+}
+
+.btn-design:hover {
+    background-color: var(--color-prim);
+    color: #fff;
+}
+
+
+/* ----------HEADER-----------------------------*/
+
+.main-header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.header-action {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.top-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 6rem;
+
+}
+
+.top-navbar .logo {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+}
+
+.top-navbar .logo img {
+    width: 12rem;
+}
+
+.top-navbar ul {
+    margin-right: 12rem;
+}
+
+.top-navbar ul li {
+    position: relative;
+    list-style: none;
+    display: inline-table;
+    padding: 0.2rem 1rem;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+
+.top-navbar ul li:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.top-navbar ul li:before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-prim);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+}
+
+.top-navbar ul li:hover:before {
+    transition: all 0.5s ease-in-out;
+    transform-origin: right;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
+
+.top-navbar ul li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: "Poppins Regular";
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+}
+
+.top-navbar ul li a:before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -100%;
+}
+
+.top-navbar ul li:hover a {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+
+.hamb-menu img {
+    width: 2.7rem;
+    cursor: pointer;
+}
+
+        /* hamburger menu */
+
+.hamburger-menu {
+    transform: translateX(100%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 43rem;
+    height: 100vh;
+    background: #333333;
+    z-index: 1000;
+    padding: 1%;
+    border-left: 1px solid rgba(255,255,255,.5);
+    transition: transform .6s ease-in-out;
+}
+
+.close-btn {
+    width: 3.4rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    padding: 5px;
+    cursor: pointer;
+}
+.close-btn img {
+    width: 100%;
+    height: auto;
+    transition: transform .5s ease-in-out;
+}
+.close-btn:hover img {
+    transform: scale(1.1) rotate(180deg);
+}
+
+.hamburger-menu-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    padding-bottom: 8%;
+}
+.hamburger-menu-list li{
+    list-style-type: none;
+    
+}
+.hamburger-menu-list li a {
+    font-size: 2.5rem;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1.2rem;
+    position: relative;
+    font-family: "Poppins Li";
+    letter-spacing: 0.1rem;    
+}
+.hamburger-menu-list li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    transition: all .4s ease-in-out;
+    background: var(--color-prim);
+    transform-origin: center;
+    transform: scaleX(0);
+    
+}
+.hamburger-menu-list li a:hover {
+    font-family: "Poppins Med";
+   
+}
+.hamburger-menu-list li a:hover:before {
+    transform: scaleX(1);
+    
+}
+.hamburger-line {
+    height: 1px;
+    width: 70%;
+    margin: auto;
+    background-color: radial-gradient;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: linear-gradient(to right, rgba(255,255,255,0.3),#fff,rgba(255,255,255,0.3));
+}
+.hamburger-icons-whrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8rem;
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: space-around;
+}
+.hamburger-icons-whrap img {
+    width: 3rem;
+    transition: box-shadow .5s ease-in-out;
+    cursor: pointer;
+}
+.hamburger-icons-whrap img:hover {
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.8);
+}
+
+.hamburger-menu-footer {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    font-family:"Poppis Li";
+    letter-spacing: .1rem;
+}
+.hamburger-menu-footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+.hamburger-email,
+.hamburger-adresse,
+.hamburger-teleon {
+    display: flex;
+    align-items: baseline;
+    margin-top: 1rem;
+    font-family: "Poppins Li";
+    
+}
+.hamburger-email > img,
+.hamburger-adresse > img,
+.hamburger-telefon > img {
+    width: 1.6rem;
+    margin-right: 1rem;
+}
+.hamburger-adresse {
+    color: #fff;
+    display: flex;
+}
+.hamburger-adresse p {
+    font-size: 1.6rem;
+}
+
+.hamburger-icon-box {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    
+  
+}
+.hamburger-icon-box > img {
+    width: 10rem;
+}
+
+
+
+/* --------------BANNER-------------------------*/
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 1080px;
+}
+
+.slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.slideshow>img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    transform: scale(1.2) rotate(5deg);
+    opacity: 0;
+    animation: animate 80s infinite;
+    -webkit-animation: animate 80s infinite;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: scale(1.2) rotate(5deg);
+    -moz-transform: scale(1.2) rotate(5deg);
+    -ms-transform: scale(1.2) rotate(5deg);
+    -o-transform: scale(1.2) rotate(5deg);
+}
+
+.slideshow img:nth-child(4) {
+    animation-delay: 59s;
+}
+
+.slideshow img:nth-child(3) {
+    animation-delay: 39s;
+}
+
+.slideshow img:nth-child(2) {
+    animation-delay: 19s;
+}
+
+
+@keyframes animate {
+    5% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+
+    45% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.slideshow .grafik {
+    width: 100%;
+}
+
+.slideshow .grafik img {
+    position: absolute;
+    width: 100%;
+    z-index: 12;
+    left: 0;
+    bottom: -2px;
+}
+
+.banner-text-box {
+    z-index: 100;
+    color: #fff;
+    position: absolute;
+    max-width: 65rem;
+    top: 40%;
+    left: 40%;
+    transform: translate(-60%, -60%);
+
+}
+
+.banner-text-box p {
+    font-family: "Poppins Regular";
+    font-size: 3.5rem;
+    letter-spacing: 0.5rem;
+}
+
+.banner-text-box p span {
+    font-size: 15rem;
+    font-family: "headtext";
+    display: block;
+    line-height: 100%;
+
+}
+
+.banner-text-box .grafik-element {
+    position: absolute;
+    bottom: -14rem;
+    left: 30rem;
+}
+
+.banner-text-box .grafik-element img {
+    width: 60rem;
+}
+
+.socialmedia {
+    z-index: 20;
+    display: flex;
+    position: absolute;
+    bottom: -8rem;
+}
+
+.socialmedia>img {
+    cursor: pointer;
+    width: 4rem;
+}
+
+.social-icons {
+    overflow: hidden;
+}
+
+
+.icons-box {
+    padding-left: 2rem;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+}
+
+.icons-action {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+.icons-box a {
+    margin-right: 1.5rem;
+}
+
+.icons-box img {
+    width: 3.5rem;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.icons-box img:nth-last-child(1) {
+    margin-right: 0;
+}
+
+/*---------------STARTSEITE-ESLEBNISSE SECTION ---------------------------------------------------------*/
+
+.home-erlebnisse {
+    padding: 10rem 0 30rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.map {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.erlebniss-content-box {
+    padding: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.erlebniss-content-box .content-image {
+    position: relative;
+    overflow: hidden;
+    max-width: 40rem;
+    min-width: 30rem;
+    height: 45rem;
+
+}
+
+.erlebniss-content-box .content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.erlebniss-content-box .content-image:nth-child(2) {
+    transform: translateY(-15rem);
+
+}
+
+.erlebniss-content-box .content-image:nth-child(3) {}
+
+.erlebniss-content-box .content-image h4 {
+    font-size: 2.5rem;
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    color: #fff;
+    letter-spacing: 0.2rem;
+}
+
+
+.erlebniss-content-box .content-image:nth-child(1) h4 {
+    bottom: 2rem;
+}
+
+.erlebniss-content-box .content-image span {
+    display: block;
+}
+
+.home-action {
+    display: flex;
+    justify-content: center;
+    padding-top: 10rem;
+}
+
+.home-erlebnisse-btn {
+    z-index: 20;
+    background-color: transparent;
+    margin-top: 5rem;
+}
+
+
+
+/*-------SECTION TOUREN------------*/
+
+.tours {
+    padding: 10rem 0;
+    background-color: #333333;
+    color: #ffffff;
+}
+.tours h2 {
+    margin: 0;
+    margin-top: 10rem;
+}
+
+.tours-content {
+    display: flex;
+}
+
+.tours-text,
+.tours-images {
+    width: 50%;
+}
+
+.tours-text {
+    padding: 10rem 0rem 10rem 10rem;
+}
+
+.tours-text h4 {
+    font-size: 3rem;
+    cursor: pointer;
+    display: table;
+    font-family: "Poppins Med";
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.tours-text h4:hover {
+    color: var(--color-prim);
+    transform: translateX(3rem);
+    -webkit-transform: translateX(3rem);
+    -moz-transform: translateX(3rem);
+    -ms-transform: translateX(3rem);
+    -o-transform: translateX(3rem);
+}
+
+.tours-text {
+    opacity: 1;
+}
+
+.tour-btn {
+    margin-top: 5rem;
+}
+
+.tours-images {
+    position: relative;
+    overflow: hidden;
+    max-height: 50rem;
+}
+
+.tours-images img {
+    position: absolute;
+    border: 1px solid #ffffff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+}
+
+/* tour pop up content */
+
+#tour-content {
+    position: fixed;
+    width: 50%;
+    max-width: 900px;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    z-index: 33000;
+    background: #fff;
+    border-left: 1px solid #333333;
+    padding: 0 2%;
+    padding-bottom: 5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+#tour-content.active {
+    transform: translateX(0);
+}
+.tour-close {
+    width: 5.5rem;
+    padding: 15px;
+    z-index: 33333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 2rem;
+    left: 0;
+    cursor: pointer;
+    
+   
+}
+.tour-close img {
+    width: 100%;
+    transition: transform .5s ease-in-out;
+}
+.tour-close:hover img {
+    transform: rotate(180deg) scale(1.1);
+}
+
+.tour-info-wrap {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding-top: 5rem;
+    justify-content: space-evenly;
+}
+
+.tour-info-text,
+.tour-info-image {
+    width: 45%;
+    height: 30rem;
+    
+    
+}
+.tour-info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.tour-info-text h3 {
+    font-size: 3rem;
+    width: 80%;
+    text-align: right;
+    margin-left: 20%;
+}
+.tour-info-text p {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+.tour-info-text p span {
+    font-size: 2.2rem;
+    font-family: "Poppins Med";
+}
+
+.tour-info__btn {
+    display: inline-block;
+    max-width: 15rem;
+    padding: 5px 15px;
+    background-color: var(--color-prim);
+    color: #fff;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.tour-info-image {
+    overflow: hidden;
+}
+.tour-info-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.tour-desc {
+    padding:5rem 0;
+}
+.tour-desc h3 {
+    font-size: 2.3rem;
+}
+.tour-desc p {
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-left: 3rem;
+}
+
+.tour-bewertung h3 {
+    font-size: 2.3rem;
+}
+.tour-balken-wrap {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+}
+
+.tour-balken {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 2rem;
+}
+.tour-balken p {
+    font-size: 1.3rem;
+    width: 30%;
+}
+
+            /* balken */
+
+.balken-container {
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+.balken-rahmen {
+    position: relative;
+    height: 10px;
+    border: #333333 1px solid;
+    width: 20rem;
+    margin-right: 1rem;
+}
+.balken-progress {
+    position: absolute;
+    width: 80%;
+    background-color: var(--color-prim);
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/*------------------------------------
+------------SEHENWÜRDIGKEITEN -------
+-----------*/
+
+
+.sehenswuerdigkeiten {
+    padding: 10rem 0;
+    padding-bottom: 20rem;
+}
+
+.swiper-container {
+    padding-left: calc(10% + 10rem);
+}
+
+.swiper-wrapper {
+    padding: 2.5rem 0 8rem 0;
+}
+
+.card {
+    margin: 0 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    min-height: 55rem;
+    width: 40rem;
+    transition: transform 0.7s ease-in-out;
+    -webkit-transition: transform 0.7s ease-in-out;
+    -moz-transition: transform 0.7s ease-in-out;
+    -ms-transition: transform 0.7s ease-in-out;
+    -o-transition: transform 0.7s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2rem);
+    -webkit-transform: translateY(-2rem);
+    -moz-transform: translateY(-2rem);
+    -ms-transform: translateY(-2rem);
+    -o-transform: translateY(-2rem);
+}
+
+.card .see-image img {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide h4 {
+    font-size: 2.5rem;
+    padding: 2rem 3rem;
+    font-family: "Poppins Med";
+}
+
+.swiper-slide p {
+    font-size: 1.5rem;
+    padding: 0 3rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {}
+
+.see-link {
+    padding-left: calc(10% + 10rem);
+    margin-top: 2rem;
+}
+
+.see-link a {
+    font-size: 1.8rem;
+}
+
+/*-------------------------------------------------------
+---------ZITAT---------
+---------------------------------------*/
+
+
+.zitat {
+    background-image: url(../img/startseite/bg_text.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-attachment: fixed;
+
+
+}
+
+.zitat p {
+    padding: 25rem;
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+/*-----------------------------------------------------
+----------PARTNERS------------
+-----------------------------------------*/
+
+.partners {
+    padding: 0 0;
+}
+
+.partners .logos-whrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10rem;
+}
+
+.partners .logos-whrapper img {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    cursor: pointer;
+    transition: filter 0.6s ease-in-out;
+    -webkit-transition: filter 0.6s ease-in-out;
+    -moz-transition: filter 0.6s ease-in-out;
+    -ms-transition: filter 0.6s ease-in-out;
+    -o-transition: filter 0.6s ease-in-out;
+}
+
+.partners .logos-whrapper img:hover {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+}
+
+/*-----------------------------------------
+------------GALLERY------------
+------------------------------------------*/
+
+.home-gallery {
+    padding-bottom: 20rem;
+    padding-top: 3%;
+    background-image: url(../img/startseite/galerie/gallery_bg.jpg);
+    background-position: 0 0;
+    background-size: cover;
+    width: 100%;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.home-gallery-whrapper {
+    display: flex;
+    /* box-shadow: 0px 0px 99px rgba(254, 254, 254, 0.2); */
+}
+
+.home-gallery-whrapper img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.images-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.enter-grafik {
+    display: flex;
+    position: relative;
+    background-color: var(--color-prim);
+    width: 50%;
+    cursor: pointer;
+
+}
+
+.enter-grafik img {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.enter-grafik img:nth-child(1) {
+    transition: left 0.7s ease;
+    width: 30%;
+    left: 15%;
+    -webkit-transition: left 0.7s ease-in-out;
+    -moz-transition: left 0.7s ease;
+    -ms-transition: left 0.7s ease;
+    -o-transition: left 0.7s ease;
+}
+
+.enter-grafik img:nth-child(2) {
+    width: 15%;
+    left: 50%;
+}
+
+.enter-grafik:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+}
+
+.enter-grafik:hover:after {
+    opacity: 1;
+}
+
+.enter-grafik:hover img:nth-child(1) {
+    animation: arrow 1.3s infinite;
+    -webkit-animation: arrow 1.4s infinite;
+}
+
+@keyframes arrow {
+    0% {
+        left: 15%;
+    }
+
+    80% {
+        left: 30%;
+    }
+
+}
+
+
+/*------------------------------------------------
+-------------NEWS--------
+----------------------------------------*/
+
+.news {
+    padding: 20rem 0;
+    padding-left: 16rem;
+    background-image: url(../img/startseite/newsletter_bg.png);
+    background-size: cover;
+    position: relative;
+}
+
+.news p {
+    font-size: 3rem;
+    width: 50%;
+    min-width: 40rem;
+}
+
+.news-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 65%;
+}
+
+.news-form input {
+    width: 50%;
+    min-width: 40rem;
+    height: 6rem;
+    font-size: 2rem;
+    padding: 2rem;
+    border: 1px solid #333333;
+    margin: 6rem 0;
+
+
+}
+
+.news-form button {
+    width: 20rem;
+    background-color: var(--color-prim);
+    color: #fff;
+    text-align: center;
+}
+
+
+/*-------------------------------------------------------
+-----------FOOTER----------
+-----------------------------------*/
+
+.footer {
+    position: relative;
+    padding: 5rem 0 2rem 0;
+    background-color: #333333;
+    width: 100%;
+}
+
+.footer-whrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Poppins Li";
+}
+
+.footer .kontakt-box,
+.footer .icon-box,
+.footer .text-box {
+    width: 30%;
+    min-width: 25rem;
+    height: auto;
+}
+
+.footer .kontakt-box a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer .kontakt-box img {
+    transform: translateY(0.4rem);
+    -webkit-transform: translateY(0.4rem);
+    -moz-transform: translateY(0.4rem);
+    -ms-transform: translateY(0.4rem);
+    -o-transform: translateY(0.4rem);
+}
+
+.footer .kontakt-box .adresse {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer .kontakt-box img {
+    margin-right: 1rem;
+}
+
+
+.footer .icon-box {
+    text-align: center;
+}
+
+.icons-whrap {
+    margin: 1rem 0;
+}
+
+.icons-whrap img {
+    margin: 0 0.5rem;
+}
+
+.icon-box a {
+    margin-top: 3.8rem;
+    display: block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.text-box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    min-width: 3rem;
+}
+
+.text-box a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+/* resposive media query STARTSETE*/
+@media only screen and (max-width: 1400px) {
+    #tour-content {
+        width: 80%;
+        
+        
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .top-navbar ul {
+        display: none;
+    }
+
+    .banner-text-box {
+        position: absolute;
+        padding: 0;
+        max-width: 60rem;
+        top: 40%;
+        left: 40%;
+        transform: translate(-60%, -60%);
+    }
+
+    .banner-text-box p span {
+
+        font-size: 10rem;
+    }
+
+    .banner-text-box .grafik-element img {
+        display: none;
+    }
+
+
+    .banner-text-box .grafik-element {
+        right: 20rem;
+    }
+
+    .banner-text-box p {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin: 5rem 0;
+    }
+
+    .socialmedia>img {
+        width: 3.5rem;
+    }
+
+    .icons-box img {
+        width: 3.5rem;
+    }
+
+    /*erlebnisse*/
+    .map {
+        display: none;
+    }
+
+    .erlebniss-content-box {
+        padding: 0;
+        justify-content: space-around;
+    }
+
+    .erlebniss-content-box .content-image {
+        width: 70%;
+        height: 50rem;
+        margin-bottom: 5rem;
+
+    }
+
+    .erlebniss-content-box .content-image:nth-child(3) {
+        transform: translateY(0rem);
+        -webkit-transform: translateY(0rem);
+        -moz-transform: translateY(0rem);
+        -ms-transform: translateY(0rem);
+        -o-transform: translateY(0rem);
+    }
+
+
+
+
+    .erlebniss-content-box .content-image:nth-child(2) {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    .erlebniss-content-box .content-image h4 {
+        font-size: 2rem;
+        position: absolute;
+        left: 2rem;
+        bottom: 2rem;
+        color: #ffffff;
+        letter-spacing: 0.2rem;
+    }
+
+    .home-action {
+        padding-top: 4rem;
+    }
+
+    .home-erlebnisse-btn {
+        z-index: 20;
+        background-color: transparent;
+        margin-top: 0rem;
+    }
+
+    /*Touren*/
+
+    .tours {
+        padding: 5rem 0;
+    }
+
+    .tours-text {
+        padding-left: 0;
+    }
+
+    .tours-text h4 {
+        font-size: 2.5rem;
+    }
+
+
+    /* sehen*/
+    .swiper-container {
+        padding-left: 10%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+
+    .see-link {
+        padding-left: 10%;
+        margin-top: 0rem;
+    }
+
+    .swiper-wrapper {
+        padding-bottom: 3rem;
+    }
+
+    /*zitat*/
+
+    .zitat p {
+        padding: 10rem 10%;
+        font-size: 2rem;
+    }
+
+    /*partners*/
+
+    .partners .logos-whrapper img {
+        width: 16%;
+        min-width: 10rem;
+    }
+
+    /*news*/
+
+    .news {
+        padding: 10rem;
+    }
+
+    .news p {
+        font-size: 2.4rem;
+        width: 100%;
+    }
+
+    .news-form input {
+        padding: 0.7rem 2rem;
+        height: 5rem;
+    }
+
+    .news-form button {
+        height: 5rem;
+        width: 17rem;
+    }
+
+    /*footer*/
+    .footer p,
+    .footer a {
+        font-size: 1.5rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+    .swiper-container {
+        padding-left: 10%;
+    }
+
+    .tours-images {
+        display: none;
+    }
+
+    .tours-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tours-text h4 {
+        text-align: center;
+        display: block;
+    }
+
+    .banner-text-box {
+        position: absolute;
+        padding: 0;
+        max-width: 55rem;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+    }
+    .banner-text-box p {
+        font-size: 2rem;
+    }
+    .banner-text-box p span {
+        font-size: 8rem;
+    }
+
+    .banner-text-box .grafik-element {
+        display: none;
+    }
+
+    .home-gallery-whrapper {
+        flex-direction: column;
+    }
+
+    .home-gallery-whrapper>img {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .images-box {
+        width: 100%;
+    }
+
+    .erlebniss-content-box .content-image {
+        min-width: 90%;
+    }
+
+    #tour-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    html {
+        font-size: 8px;
+    }
+    .hamburger-menu {
+        width: 100%;
+    }
+
+    .banner-text-box {
+        padding-left: 5%;
+    }
+
+    .banner-text-box p {
+        letter-spacing: 2px;
+    }
+
+    .home-erlebnisse {
+        padding: 10rem 0 10rem 0;
+
+    }
+
+    .news {
+        padding-left: 0;
+    }
+
+    .tours-text {
+        padding: 0rem 0rem 0rem 0rem;
+    }
+
+    .footer .icon-box {
+        min-width: 15rem;
+    }
+
+    .footer .icon-box a {
+        margin: 0;
+    }
+
+    .footer .icon-box>img {
+        width: 14rem;
+    }
+
+    .icons-whrap img {
+        width: 2rem;
+    }
+
+    .text-box {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .erlebniss-content-box .content-image {
+        min-width: 100%;
+    }
+
+    .card:hover {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    .swiper-wrapper {
+        padding: 2.5rem 19px 12rem 3px;
+    }
+
+    .swiper-slide:nth-last-child(1) {
+        padding-right: 20px;
+
+    }
+
+    .swiper-container {
+        padding-left: 2%;
+    }
+
+    .see-link {
+        padding-left: 4%;
+        margin-top: -8rem;
+
+    }
+
+}
+
+@media only screen and (max-width: 340px) {
+    html {
+        font-size: 6px;
+    }
+}
+
+
+
+
+/*-----------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+----SEITE ERLEBNISSE*/
+
+.erlebnisse-content h2 {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.info-banner {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+}
+
+.info-banner::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, #FFFFFF 1%, rgba(255, 255, 255, 0) 15%);
+}
+
+.info-banner img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.info-beschreibung {
+    padding: 0 10%;
+}
+
+.info-beschreibung p {
+    font-size: 1.8rem;
+    line-height: 150%;
+    font-family: "Poppins Med";
+}
+
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    padding-left: 10%;
+}
+
+.content-text,
+.content-image {
+    min-height: 30rem;
+    min-width: 40rem;
+
+}
+
+.content-text {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.content-text p {
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+
+.content-image {
+    width: 45%;
+    height: 40rem;
+    padding-left: 5%;
+    position: relative;
+}
+
+.content-image>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.erlebnisse-line {
+    height: 1px;
+    width: 20%;
+    background-color: #333333;
+    margin: 18rem auto;
+}
+
+.erlebnisse-buttons {
+    position: absolute;
+    left: 0;
+    bottom: -6rem;
+    display: flex;
+}
+
+.btn-opacity {
+    opacity: 0.3;
+}
+
+.erlebnisse-buttons .prev,
+.erlebnisse-buttons .next {
+    padding: 2px 3rem;
+    display: flex;
+    align-items: center;
+    height: auto;
+    margin-right: 2rem;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.erlebnisse-buttons .prev img,
+.erlebnisse-buttons .next img {
+    width: 3rem;
+}
+
+
+/*media query für erlebnisse- Seite*/
+
+@media only screen and (max-width: 1000px) {
+    .content-box {
+        padding: 0;
+    }
+
+    .content-text,
+    .content-image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .erlebnisse-line {
+        margin: 0 auto;
+    }
+
+    .erlebnisse-buttons .prev,
+    .erlebnisse-buttons .next {
+        padding: 3px;
+        width: auto;
+        height: 10rem;
+        background-color: rgba(255, 255, 255, .3);
+        border: none;
+    }
+
+    .erlebnisse-buttons {
+        bottom: 35%;
+        width: 100%;
+        justify-content: space-between;
+
+    }
+
+    .erlebnisse-buttons .prev img,
+    .erlebnisse-buttons .next img {
+        width: 4rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .titel {
+        font-size: 6rem;
+    }
+
+    .info-beschreibung {
+        padding: 0;
+    }
+}
+
+/* ---------------------------------------------------------
+-------------- HOTELS SEITE-----------------------
+---------------------------------------------------------- */
+
+
+
+.hotel-komponent {
+    padding: 10rem 0;
+}
+
+.head-info-left,
+.head-info-right {
+    display: flex;
+}
+
+.head-info-left {
+    flex-wrap: wrap-reverse;
+}
+
+.head-info-right {
+    flex-wrap: wrap;
+}
+
+.hotel-name-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 50%;
+    padding-right: 3rem;
+    min-width: 35rem;
+}
+
+.hotel-name-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 50%;
+    padding-left: 3rem;
+    min-width: 35rem;
+}
+
+.hotel-name-left h1,
+.hotel-name-right h1 {
+    font-size: 4rem;
+    text-align: right;
+    margin-bottom: 1rem;
+    line-height: 120%;
+
+}
+
+.hotel-name-right span {
+    display: block;
+    text-align: left;
+}
+
+.hotel-name-left a,
+.hotel-name-right a {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.hotel-image {
+    width: 50%;
+    min-width: 35rem;
+}
+
+.hotel-image img {
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* tab-menu */
+
+.tab-menu {
+    width: 100%;
+    padding-top: 10rem;
+}
+
+.tab-menu ul {
+    display: flex;
+    text-align: center;
+
+}
+
+.tab-menu ul li {
+    position: relative;
+    min-width: 20rem;
+    list-style-type: none;
+    display: inline-block;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+    padding: 0 0;
+    cursor: pointer;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    background-color: rgb(230, 230, 230);
+}
+
+.tab-active {
+    background-color: rgb(245, 245, 245) !important;
+    box-shadow: 0px -1px 1.2px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* content */
+.hotel-description,
+.hotel-price,
+.hotel-gallery {
+    position: relative;
+    display: none;
+    width: 80%;
+    min-width: 80rem;
+    padding: 3rem 3rem;
+    height: 40rem;
+    border-radius: 0 5px 5px 5px;
+    -webkit-border-radius: 0 5px 5px 5px;
+    -moz-border-radius: 0 5px 5px 5px;
+    -ms-border-radius: 0 5px 5px 5px;
+    -o-border-radius: 0 5px 5px 5px;
+    overflow: auto;
+}
+
+.content-active {
+    display: block;
+    box-shadow: 0px -.5px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgb(245, 245, 245);
+}
+
+.hotel-description p,
+.hotel-price p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: .05rem;
+    font-family: "Poppins Li";
+}
+
+.hotel-gallery-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.hotel-gallery img {
+    width: 30rem;
+    margin: 2px;
+
+}
+
+/* media query hotels seite */
+
+@media only screen and (max-width: 1000px) {
+
+    .hotel-description,
+    .hotel-price,
+    .hotel-gallery {
+        width: 95%;
+        min-width: 0;
+    }
+
+    .tab-menu ul {
+        width: 100%;
+    }
+
+    .tab-menu ul li {
+        padding: 1rem 1rem 1rem 1rem;
+        min-width: 10rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .info-banner {
+        height: 30vh;
+    }
+
+    .hotel-image {
+        width: 100%;
+    }
+
+    .hotel-name-right {
+        width: 100%;
+        margin-top: 3rem;
+        padding: 0;
+    }
+
+    .hotel-name-left {
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 3rem;
+        padding: 0;
+    }
+
+
+    .tab-menu {
+        padding-top: 5rem;
+    }
+
+    .hotel-gallery img {
+        width: 100%;
+    }
+
+    .hotel-gallery,
+    .hotel-price {
+        height: 60rem;
+        overflow: auto;
+
+    }
+}
+
+
+
+/* ---------------------------------------------------------
+-------------- FAUNA UND FLORA SEITE-----------------------
+---------------------------------------------------------- */
+
+
+.Pflanzenwelt,
+.tierwelt,
+.tierwelt-wasser {
+    padding: 10rem 0;
+}
+
+.pflanzenwelt-image,
+.tierwelt-image,
+.tierwelt-wasser-image {
+    position: relative;
+    height: 50rem;
+    width: 100%;
+    width: 85%;
+    background-size: cover;
+    background-position: center;
+}
+
+.pflanzenwelt-image {
+    background-image: url(../img/flora-fauna/flanzen.jpg);
+}
+
+.tierwelt-image {
+    background-image: url(../img/flora-fauna/kenguru.jpg);
+    margin-left: 15%;
+}
+
+.tierwelt-wasser-image {
+    background-image: url(../img/flora-fauna/schark.jpg);
+}
+
+.pflanzenwelt-image:before,
+.tierwelt-image:before,
+.tierwelt-wasser-image:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -3rem;
+    left: 3rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+}
+
+.tierwelt-image:before {
+    left: -3rem;
+}
+
+.pflanzenwelt-info,
+.tierwelt-info,
+.tierwelt-wasser-info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem 0;
+}
+
+.pflanzenwelt-info h4,
+.tierwelt-info h4,
+.tierwelt-wasser-info h4 {
+    font-size: 2.5rem;
+    width: 50%;
+    min-width: 45rem;
+    font-family: "Poppins Med";
+}
+
+.pflanzenwelt-info-text,
+.tierwelt-info-text,
+.tierwelt-wasser-info-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.pflanzenwelt-info-text p,
+.tierwelt-info-text p,
+.tierwelt-wasser-info-text p {
+    font-size: 2rem;
+    line-height: 150%;
+
+}
+
+.pflanzenwelt__btn,
+.tierwelt__btn,
+.tierwelt-wasser__btn {
+    margin-top: 6rem;
+    max-width: 35rem;
+    background-color: var(--color-prim);
+    color: #fff;
+    border: none;
+}
+
+.pflanzenwelt__btn img,
+.tierwelt__btn img,
+.tierwelt-wasser__btn img {
+    width: 2rem;
+}
+
+.btn-arrow-action {
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(180deg);
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+}
+
+/* pflanzenwelt content */
+
+.pflanzenwelt-content {}
+
+.pflanzenwelt-content-text {
+    background-color: rgb(238, 238, 238);
+    padding: 5rem 5%;
+}
+
+.regenwald-titel-wrap,
+.tropisch-titel-wrap {
+    display: flex;
+    position: relative;
+    width: 50%;
+}
+
+.tropisch-titel-wrap {
+    margin-left: 50%;
+}
+
+.regenwald-titel-wrap img,
+.tropisch-titel-wrap img {
+    width: 100%;
+}
+
+.regenwald-titel,
+.tropisch-titel {
+    position: absolute;
+    width: 32rem;
+    display: table;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.regenwald-titel {
+    right: -25rem;
+    bottom: 2rem;
+}
+
+.tropisch-titel {
+    left: -25rem;
+    bottom: 2rem;
+}
+
+.regenwald-titel h5,
+.tropisch-titel h5 {
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.regenwald-beschreibung,
+.tropisch-beschreibung {
+    padding: 10rem 10%;
+}
+
+.regenwald-beschreibung p,
+.tropisch-beschreibung p {
+    font-size: 1.8rem;
+    font-family: "Poppins Li";
+    letter-spacing: .1rem;
+}
+
+.pflanzenwelt-content-btn {
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: none;
+    background-color: var(--color-prim);
+    color: #fff;
+}
+
+.pflanzenwelt-content-btn img {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+
+
+
+
+
+/* responsive fauna seite */
+
+@media only screen and (max-width: 1000px) {
+
+    .pflanzenwelt-image,
+    .tierwelt-image,
+    .tierwelt-wasser-image {
+        width: 100%;
+        margin: 0;
+    }
+
+    .pflanzenwelt-info h4,
+    .tierwelt-info h4,
+    .tierwelt-wasser-info h4 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .pflanzenwelt-info-text,
+    .tierwelt-info-text,
+    .tierwelt-wasser-info-text {
+        width: 100%;
+        align-items: center;
+
+    }
+
+    .regenwald-titel,
+    .tropisch-titel {
+        padding: 1rem;
+    }
+
+    .regenwald-beschreibung,
+    .tropisch-beschreibung {
+        padding: 6rem 1%;
+    }
+
+    .regenwald-titel-wrap,
+    .tropisch-titel-wrap {
+        width: 100%;
+        margin: 0;
+    }
+
+    .regenwald-titel {
+        right: 2%;
+        bottom: -7%;
+    }
+
+    .tropisch-titel {
+        left: 2%;
+        bottom: -7%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .Pflanzenwelt,
+    .tierwelt,
+    .tierwelt-wasser {
+        padding: 5rem 0;
+    }
+
+    .pflanzenwelt-image,
+    .tierwelt-image,
+    .tierwelt-wasser-image {
+        height: 30rem;
+    }
+}
+
+/* ---------------------------------------------------------
+-------------- GALERIE SEITE-----------------------
+---------------------------------------------------------- */
+
+.bg-black {
+    background-color: #333333;
+}
+
+.titel-white {
+    color: #fff;
+}
+
+.info-banner-black::after {
+    background: linear-gradient(0deg, #333333 1%, rgba(255, 255, 255, 0) 15%);
+}
+
+.gallery {
+    padding: 10% 0;
+    width: 100%;
+}
+
+.gallery-wrap {
+    width: 80%;
+    max-width: 1400px;
+    margin: auto;
+    box-shadow: 0px 0px 300px rgba(254, 254, 254, 0.2);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-rows: auto;
+    grid-template-areas: 'img-0 img-1 img-2 img-2'
+        'img-0 img-5 img-6 img-7'
+        'img-3 img-5 img-6 img-4'
+        'img-8 img-9 img-9 img-4'
+        'img-10 img-11 img-12 img-12'
+        'img-10 img-15 img-16 img-17'
+        'img-13 img-15 img-16 img-14'
+        'img-18 img-19 img-19 img-14';
+}
+
+.gallery-wrap .images {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-wrap .images:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+
+
+}
+
+.gallery-wrap .images:hover:before {
+
+    opacity: 1;
+
+
+
+}
+
+.gallery-wrap .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 1s ease-in-out;
+
+}
+
+.gallery-wrap .images:hover img {
+    transform: scale(1.1);
+    /* filter: blur(1px); */
+}
+
+.img-0 {
+    grid-area: img-0;
+
+
+}
+
+.img-1 {
+    grid-area: img-1;
+
+}
+
+.img-2 {
+    grid-area: img-2;
+
+}
+
+.img-3 {
+    grid-area: img-3;
+    background-color: green;
+}
+
+.img-4 {
+    grid-area: img-4;
+    background-color: pink;
+
+}
+
+.img-5 {
+    grid-area: img-5;
+    background-color: beige;
+
+}
+
+.img-6 {
+    grid-area: img-6;
+    background-color: blue;
+
+}
+
+.img-7 {
+    grid-area: img-7;
+    background-color: olive;
+}
+
+.img-8 {
+    grid-area: img-8;
+    background-color: tomato;
+
+}
+
+.img-9 {
+    grid-area: img-9;
+    background-color: deepskyblue;
+}
+
+.img-10 {
+    grid-area: img-10;
+}
+
+.img-11 {
+    grid-area: img-11;
+}
+
+.img-12 {
+    grid-area: img-12;
+}
+
+.img-13 {
+    grid-area: img-13;
+}
+
+.img-14 {
+    grid-area: img-14;
+}
+
+.img-15 {
+    grid-area: img-15;
+}
+
+.img-16 {
+    grid-area: img-16;
+}
+
+.img-17 {
+    grid-area: img-17;
+}
+
+.img-18 {
+    grid-area: img-18;
+    height: 28rem !important;
+}
+
+.img-19 {
+    grid-area: img-19;
+    height: 28rem !important;
+}
+
+#lightbox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-active {
+    display: flex !important;
+}
+
+#lightbox img {
+    max-width: 60%;
+    max-height: 80%;
+    padding: 3px;
+    border: 1px solid #fff;
+}
+
+/* media query galerie */
+
+@media only screen and (max-width:1000px) {
+    .gallery-wrap {
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .gallery-wrap {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 3px;
+        grid-template-areas: 'img-0 img-1'
+            'img-2 img-3'
+            'img-4 img-5'
+            'img-6 img-7'
+            'img-8 img-9'
+            'img-10 img-11'
+            'img-12 img-13'
+            'img-14 img-15'
+            'img-16 img-17'
+            'img-18 img-19';
+    }
+
+    .img-19,
+    .img-18 {
+        height: 25rem !important;
+    }
+
+    .gallery-wrap .images {
+        height: 25rem;
+    }
+
+    #lightbox img {
+        max-width: 80%;
+        max-height: 80%;
+    }
+}

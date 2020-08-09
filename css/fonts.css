@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "headtext";
+    src: url("../fonts/gloss_and_bloom/Gloss_And_Bloom.ttf");
+   }
+
+   @font-face {
+    font-family: "Poppins Regular";
+    src: url("../fonts/Poppins/Poppins-Regular.ttf");
+   }
+
+   @font-face {
+    font-family: "Poppins Med";
+    src: url("../fonts/Poppins/Poppins-Medium.ttf");
+   }
+
+   @font-face {
+    font-family: "Poppins Li";
+    src: url("../fonts/Poppins/Poppins-light.ttf");
+   }
