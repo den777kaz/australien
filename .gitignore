@@ -3,6 +3,8 @@
 ### Example user template d
 
 # IntelliJ project files
-/.idea
-/.vscode
-
+.idea
+.vscode
+*.iml
+out
+gen
