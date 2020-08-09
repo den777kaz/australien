@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="59b8d512-08ca-475e-993b-9830711c7708" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,8 @@
       <updated>1597004522572</updated>
       <workItem from="1597004523623" duration="347000" />
       <workItem from="1597005366286" duration="122000" />
-      <workItem from="1597005494584" duration="318000" />
+      <workItem from="1597005494584" duration="683000" />
+      <workItem from="1597006211854" duration="183000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1597005682602</created>
@@ -60,7 +62,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597005716232</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="gitignore">
+      <created>1597005821310</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597005821310</updated>
+    </task>
+    <task id="LOCAL-00004" summary="gitignore">
+      <created>1597005970806</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597005970806</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,16 +85,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore" />
     <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="393" y="59" key="CommitChangelistDialog2" timestamp="1597005716163">
+    <state x="393" y="59" key="CommitChangelistDialog2" timestamp="1597005970738">
       <screen x="0" y="23" width="1536" height="937" />
     </state>
-    <state x="393" y="59" key="CommitChangelistDialog2/0.23.1536.937@0.23.1536.937" timestamp="1597005716163" />
-    <state x="701" y="387" key="Github.ShareDialog" timestamp="1597005231052">
+    <state x="393" y="59" key="CommitChangelistDialog2/0.23.1536.937@0.23.1536.937" timestamp="1597005970738" />
+    <state x="701" y="387" key="Github.ShareDialog" timestamp="1597006241941">
       <screen x="0" y="23" width="1536" height="937" />
     </state>
-    <state x="701" y="387" key="Github.ShareDialog/0.23.1536.937@0.23.1536.937" timestamp="1597005231052" />
+    <state x="701" y="387" key="Github.ShareDialog/0.23.1536.937@0.23.1536.937" timestamp="1597006241941" />
     <state x="574" y="195" key="Github.UntrackedFilesDialog" timestamp="1597005237199">
       <screen x="0" y="23" width="1536" height="937" />
     </state>
@@ -87,9 +104,9 @@
       <screen x="0" y="23" width="1536" height="937" />
     </state>
     <state x="329" y="122" key="SettingsEditor/0.23.1536.937@0.23.1536.937" timestamp="1597005487362" />
-    <state x="428" y="223" key="Vcs.Push.Dialog.v2" timestamp="1597005718397">
+    <state x="428" y="223" key="Vcs.Push.Dialog.v2" timestamp="1597006008942">
       <screen x="0" y="23" width="1536" height="937" />
     </state>
-    <state x="428" y="223" key="Vcs.Push.Dialog.v2/0.23.1536.937@0.23.1536.937" timestamp="1597005718397" />
+    <state x="428" y="223" key="Vcs.Push.Dialog.v2/0.23.1536.937@0.23.1536.937" timestamp="1597006008942" />
   </component>
 </project>
