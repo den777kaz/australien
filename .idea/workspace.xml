@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59b8d512-08ca-475e-993b-9830711c7708" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +11,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/index.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1fsQs19nJycTllApCEp7zvrR01U" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -45,7 +48,7 @@
       <workItem from="1597004523623" duration="347000" />
       <workItem from="1597005366286" duration="122000" />
       <workItem from="1597005494584" duration="683000" />
-      <workItem from="1597006211854" duration="333000" />
+      <workItem from="1597006211854" duration="591000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1597005682602</created>
@@ -82,22 +85,30 @@
       <option name="project" value="LOCAL" />
       <updated>1597006427984</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="gitignore">
+      <created>1597006653556</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597006653556</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="gitignore" />
     <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="393" y="59" key="CommitChangelistDialog2" timestamp="1597006427918">
+    <state x="393" y="59" key="CommitChangelistDialog2" timestamp="1597006653487">
       <screen x="0" y="23" width="1536" height="937" />
     </state>
-    <state x="393" y="59" key="CommitChangelistDialog2/0.23.1536.937@0.23.1536.937" timestamp="1597006427918" />
+    <state x="393" y="59" key="CommitChangelistDialog2/0.23.1536.937@0.23.1536.937" timestamp="1597006653487" />
     <state x="701" y="387" key="Github.ShareDialog" timestamp="1597006241941">
       <screen x="0" y="23" width="1536" height="937" />
     </state>
@@ -110,9 +121,13 @@
       <screen x="0" y="23" width="1536" height="937" />
     </state>
     <state x="329" y="122" key="SettingsEditor/0.23.1536.937@0.23.1536.937" timestamp="1597005487362" />
-    <state x="428" y="223" key="Vcs.Push.Dialog.v2" timestamp="1597006455921">
+    <state x="428" y="223" key="Vcs.Push.Dialog.v2" timestamp="1597006655373">
       <screen x="0" y="23" width="1536" height="937" />
     </state>
-    <state x="428" y="223" key="Vcs.Push.Dialog.v2/0.23.1536.937@0.23.1536.937" timestamp="1597006455921" />
+    <state x="428" y="223" key="Vcs.Push.Dialog.v2/0.23.1536.937@0.23.1536.937" timestamp="1597006655373" />
+    <state x="626" y="404" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597006624134">
+      <screen x="0" y="23" width="1536" height="937" />
+    </state>
+    <state x="626" y="404" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1536.937@0.23.1536.937" timestamp="1597006624134" />
   </component>
 </project>
