@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59b8d512-08ca-475e-993b-9830711c7708" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +44,37 @@
       <updated>1597004522572</updated>
       <workItem from="1597004523623" duration="347000" />
       <workItem from="1597005366286" duration="122000" />
+      <workItem from="1597005494584" duration="318000" />
     </task>
+    <task id="LOCAL-00001" summary="gitignore">
+      <created>1597005682602</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597005682602</updated>
+    </task>
+    <task id="LOCAL-00002" summary="gitignore">
+      <created>1597005716232</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597005716232</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="393" y="59" key="CommitChangelistDialog2" timestamp="1597005716163">
+      <screen x="0" y="23" width="1536" height="937" />
+    </state>
+    <state x="393" y="59" key="CommitChangelistDialog2/0.23.1536.937@0.23.1536.937" timestamp="1597005716163" />
     <state x="701" y="387" key="Github.ShareDialog" timestamp="1597005231052">
       <screen x="0" y="23" width="1536" height="937" />
     </state>
@@ -63,5 +87,9 @@
       <screen x="0" y="23" width="1536" height="937" />
     </state>
     <state x="329" y="122" key="SettingsEditor/0.23.1536.937@0.23.1536.937" timestamp="1597005487362" />
+    <state x="428" y="223" key="Vcs.Push.Dialog.v2" timestamp="1597005718397">
+      <screen x="0" y="23" width="1536" height="937" />
+    </state>
+    <state x="428" y="223" key="Vcs.Push.Dialog.v2/0.23.1536.937@0.23.1536.937" timestamp="1597005718397" />
   </component>
 </project>
