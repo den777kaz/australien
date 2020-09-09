@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/style.css">
 
-
+    <script src="./js/preloader.js"></script>
     <title>Strartseite</title>
 </head>
 
 <body>
+    <div class="loader">
+        <img src="./img/preloader/loading.gif" alt="Loading..." />
+    </div>
     <header class="main-header">
         <div class="container">
             <nav class="top-navbar">
@@ -85,7 +88,7 @@
                 <a href="./html/erlebnisse.html">
                     <button class="home-erlebnisse-btn btn-design">mehr entdecken</button>
                 </a>
-                
+
             </div>
         </section>
         <section class="tours">
@@ -140,7 +143,7 @@
                             </p>
                         </div>
                         </div>
-                        
+
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="see-image">
@@ -153,7 +156,7 @@
                                 schenken sollten. </p>
                         </div>
                         </div>
-                        
+
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="see-image">
@@ -164,7 +167,7 @@
                                 bis heute noch nicht alle Geheimnisse entlockt werden konnten, beeindruckt insbesondere bei
                                 Sonnenaufgang oder -untergang durch sein stetig wechselndes Farbspiel.</p>
                         </div>
-                        
+
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
@@ -177,7 +180,7 @@
                                 spektakulärsten Brücken der Welt zählt, ist auch eines der markantesten Bauwerke der ......
                             </p>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
@@ -222,8 +225,8 @@
                             <img src="./img/startseite/galerie/enter_arrow.svg" alt="">
                             <img src="./img/startseite/galerie/enter_bracket.svg" alt="">
                         </div>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -258,7 +261,7 @@
                     </div>
                     <div class="email">
                         <img src="./img/startseite/footer/entypo_email.svg" alt="email">
-                        <a href="email">info@travel.com</a>
+                        <a href="mailto: info@travel.com">info@travel.com</a>
                     </div>
                 </div>
                 <div class="icon-box">
@@ -284,16 +287,19 @@
             <li class="line-3"><a href="./html/hotels.html" data-text="Hotels">Hotels</a></li>
             <li class="line-4"><a href="./html/fauna.html" data-text="Flora/Fauna">Flora/Fauna</a></li>
             <li class="line-5"><a href="./html/galerie.html" data-text="Galerie">Galerie</a></li>
-            <div class="hamburger-line line-6"></div>
+            <li class="hamburger-line line-6"></li>
+        </ul>
+        <div id="close-btn" class="close-btn">
+            <img src="./img/startseite/close.svg" alt="close">
+        </div>
+        <div class="hamburger-icon-box">
+            <img src="./img/startseite/footer/TRAVEL.png" alt="logo travel">
+        </div>
+        <div class="hamburger-menu-footer">
             <div class="hamburger-icons-whrap">
                 <img class="line-7" src="./img/startseite/footer/facebook.svg" alt="facebook">
                 <img class="line-8" src="./img/startseite/footer/insta.svg" alt="instagram">
                 <img class="line-9" src="./img/startseite/footer/pinterest.svg" alt="pinterest">
-            </div>
-        </ul>
-        <div class="hamburger-menu-footer">
-            <div id="close-btn" class="close-btn">
-                <img src="./img/startseite/close.svg" alt="close">
             </div>
             <div class="hamburger-telefon">
                 <img src="./img/startseite/footer/phone-call.svg" alt="">
@@ -309,11 +315,9 @@
             </div>
             <div class="hamburger-email">
                 <img src="./img/startseite/footer/entypo_email.svg" alt="email">
-                <a href="email">info@travel.com</a>
+                <a href="mailto: info@travel.com">info@travel.com</a>
             </div>
-            <div class="hamburger-icon-box">
-                <img src="./img/startseite/footer/TRAVEL.png" alt="logo travel">
-            </div>
+
         </div>
     </div>
 
@@ -322,11 +326,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <script src="./js/swiper.min.js"></script>
-   
+
     <script src="./js/script.js"></script>
-    
+
     <script>
-        var swiper = new Swiper('.swiper-container', {
+        let swiper = new Swiper('.swiper-container', {
             slidesPerView: 4,
             spaceBetween: 100,
             // init: false,

@@ -45,9 +45,7 @@ headerOnScroll();
 const hoverOnText = () => {
 
     const texts = document.querySelectorAll(".tours__text"),
-        images = document.querySelectorAll(".tours-images img"),
-        textBox = document.querySelector(".tours-text");
-
+        images = document.querySelectorAll(".tours-images img");
     // texts loop
 
     texts.forEach((a, b) => {
@@ -414,9 +412,8 @@ const tourenPopUpWindow = () => {
             `
         },
         renderContent: function () {
-            // (titel,price,link,image,desc,count,progress1,progress2,progress3,progress4,progress5)
             const btn = document.querySelectorAll(".tours__text");
-            var animation = new TimelineMax();
+            const animation = new TimelineMax();
             btn.forEach((item) => {
                 item.addEventListener("click", () => {
 
@@ -489,7 +486,8 @@ const tourenPopUpWindow = () => {
 
                     } else if (item.dataset.id == this.reef.id) {
 
-                        this.createContent(this.reef.titel,
+                        this.createContent(
+                            this.reef.titel,
                             this.reef.price,
                             this.reef.link,
                             this.reef.image,
@@ -506,7 +504,7 @@ const tourenPopUpWindow = () => {
 
                     }
 
-                    document.body.style.overflowY = "hidden";
+                    // document.body.style.overflowY = "hidden";
 
                     animation.from(".tour-info-wrap", .7, {x: 150, opacity: 0});
                     animation.from(".tour-desc", .7, {x: 150, opacity: 0});

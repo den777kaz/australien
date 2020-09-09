@@ -3,15 +3,15 @@
 
 const headerOnScroll = ()=> {
     const header = document.querySelector(".main-header");
-    oldValue = window.scrollY;
+    let oldValue = window.scrollY;
     window.addEventListener("scroll", ()=>{
         // Get the new Value
-    newValue = window.scrollY;
+    let newValue = window.scrollY;
         if(scrollY > 100){
             //Subtract the two and conclude
     if(oldValue - newValue < 0){
         header.style.transform = "translateY(-100%)";
-    } else if(oldValue - newValue > 0){
+    } else if(oldValue - newValue > 25){
         header.style.transform = "translateY(0)";
         header.classList.add("header-action");
     }
@@ -34,7 +34,7 @@ const hamburgerMenu = ()=>{
 
     hambMenuBtn.addEventListener("click", ()=>{
         hambWindow.style.transform = "translateX(0)";
-        var hamb = new TimelineMax();
+        const hamb = new TimelineMax();
         hamb.from(".line-1",.5 , {x:50, opacity:0},"=+.5");
         hamb.from(".line-2",.5 , {x:50, opacity:0},"=-.4");
         hamb.from(".line-3",.5 , {x:50, opacity:0},"=-.4");
