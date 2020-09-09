@@ -1,13 +1,13 @@
 // per click Icons zeigen
-const socialIcons = ()=>{
+const socialIcons = () => {
     const icons = document.querySelector(".icons-box"),
         socialBtn = document.getElementById("social-btn");
-    
+
     socialBtn.addEventListener("click", () => {
         icons.classList.toggle("icons-action");
-        setTimeout(()=>{
+        setTimeout(() => {
             icons.classList.remove("icons-action");
-        },10000);
+        }, 10000);
     });
 };
 socialIcons();
@@ -15,26 +15,26 @@ socialIcons();
 
 // header on scroll will change background 
 
-const headerOnScroll = ()=> {
+const headerOnScroll = () => {
     const header = document.querySelector(".main-header");
     oldValue = window.scrollY;
-    window.addEventListener("scroll", ()=>{
+    window.addEventListener("scroll", () => {
         // Get the new Value
-    newValue = window.scrollY;
-        if(scrollY > 100){
+        newValue = window.scrollY;
+        if (scrollY > 100) {
             //Subtract the two and conclude
-    if(oldValue - newValue < 0){
-        header.style.transform = "translateY(-100%)";
-    } else if(oldValue - newValue > 0){
-        header.style.transform = "translateY(0)";
-        header.classList.add("header-action");
-    }
-    // Update the old value
-    oldValue = newValue;
-        }else if(scrollY < 100) {
+            if (oldValue - newValue < 0) {
+                header.style.transform = "translateY(-100%)";
+            } else if (oldValue - newValue > 0) {
+                header.style.transform = "translateY(0)";
+                header.classList.add("header-action");
+            }
+            // Update the old value
+            oldValue = newValue;
+        } else if (scrollY < 100) {
             header.classList.remove("header-action");
         }
-    
+
     });
 
 };
@@ -42,76 +42,75 @@ headerOnScroll();
 
 // section Touren
 
-const hoverOnText = ()=> {
+const hoverOnText = () => {
 
     const texts = document.querySelectorAll(".tours__text"),
         images = document.querySelectorAll(".tours-images img"),
-        textBox = document.querySelector(".tours-text");        
-        
-    // texts loop
-    
-        texts.forEach((a,b)=>{
-            a.addEventListener("mouseover",()=>{
-                images.forEach((item,index)=>{
-                    
-                    if (b==index){
-                        item.style.opacity = "1";
-                    }else {item.style.opacity = "0";}
-                }); 
-            });
+        textBox = document.querySelector(".tours-text");
 
-            a.addEventListener("mouseout",()=>{      
-                images.forEach((item,index)=>{
-                    item.style.opacity = "0";  
-                }); 
+    // texts loop
+
+    texts.forEach((a, b) => {
+        a.addEventListener("mouseover", () => {
+            images.forEach((item, index) => {
+
+                if (b === index) {
+                    item.style.opacity = "1";
+                } else {
+                    item.style.opacity = "0";
+                }
             });
         });
-            
+
+        a.addEventListener("mouseout", () => {
+            images.forEach((item, index) => {
+                item.style.opacity = "0";
+            });
+        });
+    });
+
 };
 hoverOnText();
 
-const hamburgerMenu = ()=>{
+const hamburgerMenu = () => {
     const hambMenuBtn = document.querySelector(".hamb-menu"),
-         hambWindow = document.querySelector(".hamburger-menu"),
+        hambWindow = document.querySelector(".hamburger-menu"),
         closeBtn = document.getElementById("close-btn");
 
-    hambMenuBtn.addEventListener("click", ()=>{
+    hambMenuBtn.addEventListener("click", () => {
         hambWindow.style.transform = "translateX(0)";
         var hamb = new TimelineMax();
-        hamb.from(".line-1",.5 , {x:50, opacity:0},"=+.5");
-        hamb.from(".line-2",.5 , {x:50, opacity:0},"=-.4");
-        hamb.from(".line-3",.5 , {x:50, opacity:0},"=-.4");
-        hamb.from(".line-4",.5 , {x:50, opacity:0},"=-.4");
-        hamb.from(".line-5",.5 , {x:50, opacity:0},"=-.4");
-        hamb.from(".line-6",.7 , {width: 0, opacity:0},"=-.4");
-        hamb.from(".line-7",.5 , {y:50, opacity:0},"=-.4");
-        hamb.from(".line-8",.5 , {y:50, opacity:0},"=-.4");
-        hamb.from(".line-9",.5 , {y:50, opacity:0},"=-.4");
+        hamb.from(".line-1", .5, {x: 50, opacity: 0}, "=+.5");
+        hamb.from(".line-2", .5, {x: 50, opacity: 0}, "=-.4");
+        hamb.from(".line-3", .5, {x: 50, opacity: 0}, "=-.4");
+        hamb.from(".line-4", .5, {x: 50, opacity: 0}, "=-.4");
+        hamb.from(".line-5", .5, {x: 50, opacity: 0}, "=-.4");
+        hamb.from(".line-6", .7, {width: 0, opacity: 0}, "=-.4");
+        hamb.from(".line-7", .5, {y: 50, opacity: 0}, "=-.4");
+        hamb.from(".line-8", .5, {y: 50, opacity: 0}, "=-.4");
+        hamb.from(".line-9", .5, {y: 50, opacity: 0}, "=-.4");
 
 
-        hamb.from(".hamburger-telefon",.5, {x:50, opacity:0},"=-.3");
-        hamb.from(".hamburger-adresse",.3, {x:50, opacity:0},);
-        hamb.from(".hamburger-email",.3, {x:50, opacity:0},);
+        hamb.from(".hamburger-telefon", .5, {x: 50, opacity: 0}, "=-.3");
+        hamb.from(".hamburger-adresse", .3, {x: 50, opacity: 0},);
+        hamb.from(".hamburger-email", .3, {x: 50, opacity: 0},);
 
 
-        hamb.from(".hamburger-icon-box",.8, {opacity:0});
+        hamb.from(".hamburger-icon-box", .8, {opacity: 0});
 
 
-
- 
     });
 
-    closeBtn.addEventListener("click", ()=>{
-            hambWindow.style.transform = "translateX(100%)";
+    closeBtn.addEventListener("click", () => {
+        hambWindow.style.transform = "translateX(100%)";
     });
-
 
 
 };
 hamburgerMenu();
 
 // ANIMATION
-      // anim on scroll
+// anim on scroll
 // var tl = new TimelineMax({onUpdate:updatePercentage});
 // const controller = new ScrollMagic.Controller();
 
@@ -143,50 +142,47 @@ var tl6 = new TimelineMax();
 var tl7 = new TimelineMax();
 
 
-tl1.from(".home-erlebnisse h2", .7, {y:-100, opacity:0});
-tl1.from(".item-1", .8, {x:-200, opacity:0});
-tl1.from(".item-2", .7, {y:200, opacity:0},);
-tl1.from(".item-3", .6, {x:200, opacity:0});
-tl1.from(".home-erlebnisse-btn", .8, {y:200, opacity:0},"=-.3");
-tl1.from(".map", .8, {opacity:0});
+tl1.from(".home-erlebnisse h2", .7, {y: -100, opacity: 0});
+tl1.from(".item-1", .8, {x: -200, opacity: 0});
+tl1.from(".item-2", .7, {y: 200, opacity: 0},);
+tl1.from(".item-3", .6, {x: 200, opacity: 0});
+tl1.from(".home-erlebnisse-btn", .8, {y: 200, opacity: 0}, "=-.3");
+tl1.from(".map", .8, {opacity: 0});
 
-tl2.from(".tours h2", .7, {y:-100, opacity:0});
-tl2.from(".t-1", .4, {x:-200, opacity:0});
-tl2.from(".t-2", .4, {x:-200, opacity:0});
-tl2.from(".t-3", .4, {x:-200, opacity:0});
-tl2.from(".t-4", .4, {x:-200, opacity:0});
-tl2.from(".t-5", .4, {x:-200, opacity:0});
-tl2.from(".tour-btn", .5, {y:200, opacity:0});
-tl2.from(".tours-images", .5, {opacity:0});
+tl2.from(".tours h2", .7, {y: -100, opacity: 0});
+tl2.from(".t-1", .4, {x: -200, opacity: 0});
+tl2.from(".t-2", .4, {x: -200, opacity: 0});
+tl2.from(".t-3", .4, {x: -200, opacity: 0});
+tl2.from(".t-4", .4, {x: -200, opacity: 0});
+tl2.from(".t-5", .4, {x: -200, opacity: 0});
+tl2.from(".tour-btn", .5, {y: 200, opacity: 0});
+tl2.from(".tours-images", .5, {opacity: 0});
 
-tl3.from(".sehenswuerdigkeiten h2", .5, {y:-100, opacity:0});
-tl3.from(".swiper-slide", .9, {x:200, opacity:0});
-tl3.from(".swiper-button-prev", .5, {y:100, opacity:0});
-tl3.from(".swiper-button-next", .5, {y:100, opacity:0});
-tl3.from(".see-link", .8, {y:50, opacity:0});
+tl3.from(".sehenswuerdigkeiten h2", .5, {y: -100, opacity: 0});
+tl3.from(".swiper-slide", .9, {x: 200, opacity: 0});
+tl3.from(".swiper-button-prev", .5, {y: 100, opacity: 0});
+tl3.from(".swiper-button-next", .5, {y: 100, opacity: 0});
+tl3.from(".see-link", .8, {y: 50, opacity: 0});
 
-tl4.from(".zitat p", .9, {y:200, opacity:0});
-
-
-tl5.from(".partners h2", .5, {y:-100, opacity:0});
-tl5.from(".logo-1", .4, {y:100, opacity:0});
-tl5.from(".logo-2", .3, {y:100, opacity:0});
-tl5.from(".logo-3", .2, {y:100, opacity:0});
-tl5.from(".logo-4", .1, {y:100, opacity:0});
-
-tl6.from(".home-gallery h2", .5, {y:-100, opacity:0});
-tl6.from(".gal-1", .5, {scale: 0, opacity:0},);
-tl6.from(".gal-2", .4, {scale: 0, opacity:0},);
-tl6.from(".gal-3", .3, {scale: 0, opacity:0});
-tl6.from(".gal-4", .2, {scale: 0, opacity:0});
-tl6.from(".enter-grafik", .2, {scale: 0, opacity:0});
-
-tl7.from(".news p", .5, {x:-300, opacity:0});
-tl7.from(".news-form input", .5, {x:-300, opacity:0});
-tl7.from(".news-form button", .5, {y:50, opacity:0});
+tl4.from(".zitat p", .9, {y: 200, opacity: 0});
 
 
+tl5.from(".partners h2", .5, {y: -100, opacity: 0});
+tl5.from(".logo-1", .4, {y: 100, opacity: 0});
+tl5.from(".logo-2", .3, {y: 100, opacity: 0});
+tl5.from(".logo-3", .2, {y: 100, opacity: 0});
+tl5.from(".logo-4", .1, {y: 100, opacity: 0});
 
+tl6.from(".home-gallery h2", .5, {y: -100, opacity: 0});
+tl6.from(".gal-1", .5, {scale: 0, opacity: 0},);
+tl6.from(".gal-2", .4, {scale: 0, opacity: 0},);
+tl6.from(".gal-3", .3, {scale: 0, opacity: 0});
+tl6.from(".gal-4", .2, {scale: 0, opacity: 0});
+tl6.from(".enter-grafik", .2, {scale: 0, opacity: 0});
+
+tl7.from(".news p", .5, {x: -300, opacity: 0});
+tl7.from(".news-form input", .5, {x: -300, opacity: 0});
+tl7.from(".news-form button", .5, {y: 50, opacity: 0});
 
 
 // trigger
@@ -194,49 +190,49 @@ const scene1 = new ScrollMagic.Scene({
     triggerElement: ".erlebniss-content-box",
     // duration: "100%"
 })
-  .setTween(tl1)
-   .addTo(controller);
+    .setTween(tl1)
+    .addTo(controller);
 
 const scene2 = new ScrollMagic.Scene({
     triggerElement: ".tours",
     // duration:300,
 })
-  .setTween(tl2)
-   .addTo(controller);
+    .setTween(tl2)
+    .addTo(controller);
 
 const scene3 = new ScrollMagic.Scene({
     triggerElement: ".sehenswuerdigkeiten",
     // duration:300,
 })
-  .setTween(tl3)
-   .addTo(controller);
+    .setTween(tl3)
+    .addTo(controller);
 
 const scene4 = new ScrollMagic.Scene({
     triggerElement: ".zitat",
     // duration:300,
 })
-  .setTween(tl4)
-   .addTo(controller);
+    .setTween(tl4)
+    .addTo(controller);
 
-   const scene5 = new ScrollMagic.Scene({
+const scene5 = new ScrollMagic.Scene({
     triggerElement: ".partners",
     // duration:300,
 })
-  .setTween(tl5)
-   .addTo(controller);
+    .setTween(tl5)
+    .addTo(controller);
 const scene6 = new ScrollMagic.Scene({
     triggerElement: ".home-gallery",
     // duration:300,
 })
-  .setTween(tl6)
-   .addTo(controller);
+    .setTween(tl6)
+    .addTo(controller);
 
 const scene7 = new ScrollMagic.Scene({
     triggerElement: ".news",
     // duration:300,
 })
-  .setTween(tl7)
-   .addTo(controller);
+    .setTween(tl7)
+    .addTo(controller);
 
 
 ////////////////////////////////////////////////////////////
@@ -244,17 +240,13 @@ const scene7 = new ScrollMagic.Scene({
 //////////////////////////////////////////
 
 
-const tourenPopUpWindow = ()=> {
+const tourenPopUpWindow = () => {
 
 // add div to body
     const tourContent = document.createElement("div");
     tourContent.id = "tour-content";
     document.body.appendChild(tourContent);
 
-    
-    
-       
-    
 
 // object with data und functions
 
@@ -270,7 +262,6 @@ const tourenPopUpWindow = ()=> {
                 anzahl: "55433",
                 balken1: "80",
                 balken2: "70",
-                balken3: "30",
                 balken3: "5",
                 balken4: "3",
                 balken5: "1",
@@ -289,7 +280,6 @@ const tourenPopUpWindow = ()=> {
                 balken1: "80",
                 balken2: "70",
                 balken3: "30",
-                balken3: "5",
                 balken4: "3",
                 balken5: "1",
             }
@@ -307,7 +297,6 @@ const tourenPopUpWindow = ()=> {
                 balken1: "76",
                 balken2: "56",
                 balken3: "6",
-                balken3: "1",
                 balken4: "0",
                 balken5: "0",
             }
@@ -325,7 +314,6 @@ const tourenPopUpWindow = ()=> {
                 balken1: "55",
                 balken2: "25",
                 balken3: "5",
-                balken3: "2",
                 balken4: "0",
                 balken5: "4",
             }
@@ -343,13 +331,12 @@ const tourenPopUpWindow = ()=> {
                 balken1: "50",
                 balken2: "20",
                 balken3: "10",
-                balken3: "10",
                 balken4: "5",
                 balken5: "0",
             }
 
         },
-        createContent: function (titel,price,link,image,desc,count,progress1,progress2,progress3,progress4,progress5) {
+        createContent: function (titel, price, link, image, desc, count, progress1, progress2, progress3, progress4, progress5) {
             tourContent.innerHTML = `
                     
                     <div class="tour-close">
@@ -426,84 +413,119 @@ const tourenPopUpWindow = ()=> {
                     </div>
             `
         },
-        renderContent:function(){
+        renderContent: function () {
             // (titel,price,link,image,desc,count,progress1,progress2,progress3,progress4,progress5)
-            
             const btn = document.querySelectorAll(".tours__text");
             var animation = new TimelineMax();
-            
+            btn.forEach((item) => {
+                item.addEventListener("click", () => {
 
-            btn.forEach((item) =>{
-                
-                item.addEventListener("click",() =>{
-
-                    if(item.dataset.id == this.bridge.id){
-                        
-                        this.createContent(this.bridge.titel,this.bridge.price,this.bridge.link,this.bridge.image,this.bridge.beschreibung,this.bridge.bewertung.anzahl,this.bridge.bewertung.balken1,this.bridge.bewertung.balken2,this.bridge.bewertung.balken3,this.bridge.bewertung.balken4,this.bridge.bewertung.balken5);
-
-                        tourContent.classList.add("active"); 
-                       
-                    } else if(item.dataset.id == this.kakadu.id){
-                        
-                        this.createContent(this.kakadu.titel,this.kakadu.price,this.kakadu.link,this.kakadu.image,this.kakadu.beschreibung,this.kakadu.bewertung.anzahl,this.kakadu.bewertung.balken1,this.kakadu.bewertung.balken2,this.kakadu.bewertung.balken3,this.kakadu.bewertung.balken4,this.kakadu.bewertung.balken5);
-
-                       
+                    if (item.dataset.id == this.bridge.id) {
+                        this.createContent(
+                            this.bridge.titel,
+                            this.bridge.price,
+                            this.bridge.link,
+                            this.bridge.image,
+                            this.bridge.beschreibung,
+                            this.bridge.bewertung.anzahl,
+                            this.bridge.bewertung.balken1,
+                            this.bridge.bewertung.balken2,
+                            this.bridge.bewertung.balken3,
+                            this.bridge.bewertung.balken4,
+                            this.bridge.bewertung.balken5
+                        );
+                        tourContent.classList.add("active");
+                    } else if (item.dataset.id == this.kakadu.id) {
+                        this.createContent(
+                            this.kakadu.titel,
+                            this.kakadu.price,
+                            this.kakadu.link,
+                            this.kakadu.image,
+                            this.kakadu.beschreibung,
+                            this.kakadu.bewertung.anzahl,
+                            this.kakadu.bewertung.balken1,
+                            this.kakadu.bewertung.balken2,
+                            this.kakadu.bewertung.balken3,
+                            this.kakadu.bewertung.balken4,
+                            this.kakadu.bewertung.balken5);
 
                         tourContent.classList.add("active");
-                        
-                    }else if(item.dataset.id == this.macDonell.id){
-                        
-                        this.createContent(this.macDonell.titel,this.macDonell.price,this.macDonell.link,this.macDonell.image,this.macDonell.beschreibung,this.macDonell.bewertung.anzahl,this.macDonell.bewertung.balken1,this.macDonell.bewertung.balken2,this.macDonell.bewertung.balken3,this.macDonell.bewertung.balken4,this.macDonell.bewertung.balken5);
 
-                       
+                    } else if (item.dataset.id == this.macDonell.id) {
 
-                        tourContent.classList.add("active");
-                        
-                    }else if(item.dataset.id == this.ballon.id){
-                        
-                        this.createContent(this.ballon.titel,this.ballon.price,this.ballon.link,this.ballon.image,this.ballon.beschreibung,this.ballon.bewertung.anzahl,this.ballon.bewertung.balken1,this.ballon.bewertung.balken2,this.ballon.bewertung.balken3,this.ballon.bewertung.balken4,this.ballon.bewertung.balken5);
-
-                       
-
-                        tourContent.classList.add("active");
-                        
-                    }else if(item.dataset.id == this.reef.id){
-                        
-                        this.createContent(this.reef.titel,this.reef.price,this.reef.link,this.reef.image,this.reef.beschreibung,this.reef.bewertung.anzahl,this.reef.bewertung.balken1,this.reef.bewertung.balken2,this.reef.bewertung.balken3,this.reef.bewertung.balken4,this.reef.bewertung.balken5);
-
-                       
+                        this.createContent(
+                            this.macDonell.titel,
+                            this.macDonell.price,
+                            this.macDonell.link,
+                            this.macDonell.image,
+                            this.macDonell.beschreibung,
+                            this.macDonell.bewertung.anzahl,
+                            this.macDonell.bewertung.balken1,
+                            this.macDonell.bewertung.balken2,
+                            this.macDonell.bewertung.balken3,
+                            this.macDonell.bewertung.balken4,
+                            this.macDonell.bewertung.balken5
+                        );
 
                         tourContent.classList.add("active");
-                        
+
+                    } else if (item.dataset.id == this.ballon.id) {
+
+                        this.createContent(
+                            this.ballon.titel,
+                            this.ballon.price,
+                            this.ballon.link,
+                            this.ballon.image,
+                            this.ballon.beschreibung,
+                            this.ballon.bewertung.anzahl,
+                            this.ballon.bewertung.balken1,
+                            this.ballon.bewertung.balken2,
+                            this.ballon.bewertung.balken3,
+                            this.ballon.bewertung.balken4,
+                            this.ballon.bewertung.balken5
+                        );
+
+                        tourContent.classList.add("active");
+
+                    } else if (item.dataset.id == this.reef.id) {
+
+                        this.createContent(this.reef.titel,
+                            this.reef.price,
+                            this.reef.link,
+                            this.reef.image,
+                            this.reef.beschreibung,
+                            this.reef.bewertung.anzahl,
+                            this.reef.bewertung.balken1,
+                            this.reef.bewertung.balken2,
+                            this.reef.bewertung.balken3,
+                            this.reef.bewertung.balken4,
+                            this.reef.bewertung.balken5
+                        );
+
+                        tourContent.classList.add("active");
+
                     }
 
+                    document.body.style.overflowY = "hidden";
 
-
-
-                    document.body.style.overflowY ="hidden"; 
-
-                    animation.from(".tour-info-wrap",.7, {x:150,opacity:0});
-                    animation.from(".tour-desc",.7, {x:150,opacity:0});
-                    animation.from(".tour-bewertung",.7, {x:150,opacity:0});
-
-
+                    animation.from(".tour-info-wrap", .7, {x: 150, opacity: 0});
+                    animation.from(".tour-desc", .7, {x: 150, opacity: 0});
+                    animation.from(".tour-bewertung", .7, {x: 150, opacity: 0});
 
 
                     const btnClose = document.querySelector(".tour-close");
-                    btnClose.addEventListener("click",()=>{
-                        tourContent.classList.remove("active"); 
-                        document.body.style.overflowY ="auto";
+                    btnClose.addEventListener("click", () => {
+                        tourContent.classList.remove("active");
+                        document.body.style.overflowY = "auto";
                     });
 
-                    
                 });
             });
-        
+
         }
     }
 
     tourenData.renderContent();
-
 
 
 };

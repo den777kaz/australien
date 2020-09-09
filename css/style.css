@@ -9,8 +9,8 @@
 
 html {
     font-size: 10px;
-    font-family: "Poppins Regular";
-    letter-spacing: 5%;
+    font-family: "Poppins Regular", sans-serif;
+    letter-spacing: 1px;
     scroll-behavior: smooth;
 }
 
@@ -25,13 +25,13 @@ html {
 }
 
 h2 {
-    font-family: "Poppins Med";
+    font-family: "Poppins Med", sans-serif;
     font-size: 5rem;
     margin: 10rem 0;
 }
 
 .titel {
-    font-family: "headtext";
+    font-family: "headtext", sans-serif;
     letter-spacing: 0.5rem;
     color: #333333;
     font-size: 11rem;
@@ -58,9 +58,8 @@ h2 {
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
-    font-family: "Poppins Li";
+    font-family: "Poppins Li", sans-serif;
 }
 
 .btn-design:hover {
@@ -78,7 +77,6 @@ h2 {
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
 }
 
@@ -135,7 +133,6 @@ h2 {
     transform-origin: left;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     -webkit-transform: scaleX(0);
     -moz-transform: scaleX(0);
@@ -148,7 +145,6 @@ h2 {
     transform-origin: right;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transform: scaleX(1);
     -webkit-transform: scaleX(1);
@@ -163,13 +159,12 @@ h2 {
     text-decoration: none;
     font-size: 1.5rem;
     color: #fff;
-    font-family: "Poppins Regular";
+    font-family: "Poppins Regular", sans-serif;
     letter-spacing: 0.07em;
     text-transform: uppercase;
     transition: transform 0.5s ease-in-out;
     -webkit-transition: transform 0.5s ease-in-out;
     -moz-transition: transform 0.5s ease-in-out;
-    -ms-transition: transform 0.5s ease-in-out;
     -o-transition: transform 0.5s ease-in-out;
 }
 
@@ -246,7 +241,7 @@ h2 {
     text-decoration: none;
     margin-bottom: 1.2rem;
     position: relative;
-    font-family: "Poppins Li";
+    font-family: "Poppins Med", sans-serif;
     letter-spacing: 0.1rem;    
 }
 .hamburger-menu-list li a:before {
@@ -263,7 +258,7 @@ h2 {
     
 }
 .hamburger-menu-list li a:hover {
-    font-family: "Poppins Med";
+    /*font-family: "Poppins Med";*/
    
 }
 .hamburger-menu-list li a:hover:before {
@@ -274,7 +269,6 @@ h2 {
     height: 1px;
     width: 70%;
     margin: auto;
-    background-color: radial-gradient;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -297,7 +291,7 @@ h2 {
     cursor: pointer;
 }
 .hamburger-icons-whrap img:hover {
-    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
 }
 
 .hamburger-menu-footer {
@@ -308,7 +302,7 @@ h2 {
     flex-direction: column;
     padding-left: 2rem;
     padding-bottom: 2rem;
-    font-family:"Poppis Li";
+    font-family:"Poppis Li", sans-serif;
     letter-spacing: .1rem;
 }
 .hamburger-menu-footer a {
@@ -322,7 +316,7 @@ h2 {
     display: flex;
     align-items: baseline;
     margin-top: 1rem;
-    font-family: "Poppins Li";
+    font-family: "Poppins Li", sans-serif;
     
 }
 .hamburger-email > img,
@@ -357,16 +351,17 @@ h2 {
 .banner {
     position: relative;
     width: 100%;
+    min-height: 900px;
     height: 100vh;
-    max-height: 1080px;
 }
 
 .slideshow {
     position: absolute;
     width: 100%;
-    height: 100vh;
     background-color: #fff;
     overflow: hidden;
+    min-height: 900px;
+    height: 100vh;
 }
 
 .slideshow>img {
@@ -442,14 +437,14 @@ h2 {
 }
 
 .banner-text-box p {
-    font-family: "Poppins Regular";
+    font-family: "Poppins Regular", sans-serif;
     font-size: 3.5rem;
     letter-spacing: 0.5rem;
 }
 
 .banner-text-box p span {
     font-size: 15rem;
-    font-family: "headtext";
+    font-family: "headtext", sans-serif;
     display: block;
     line-height: 100%;
 
@@ -492,7 +487,6 @@ h2 {
     transition: transform 0.5s ease-in-out;
     -webkit-transition: transform 0.5s ease-in-out;
     -moz-transition: transform 0.5s ease-in-out;
-    -ms-transition: transform 0.5s ease-in-out;
     -o-transition: transform 0.5s ease-in-out;
 }
 
@@ -513,8 +507,6 @@ h2 {
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
 }
 
 .icons-box img:nth-last-child(1) {
@@ -561,8 +553,6 @@ h2 {
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
 }
 
 .erlebniss-content-box .content-image:nth-child(2) {
@@ -612,8 +602,7 @@ h2 {
     color: #ffffff;
 }
 .tours h2 {
-    margin: 0;
-    margin-top: 10rem;
+    margin: 10rem 0 0 0;
 }
 
 .tours-content {
@@ -626,19 +615,18 @@ h2 {
 }
 
 .tours-text {
-    padding: 10rem 0rem 10rem 10rem;
+    padding: 10rem 0 10rem 10rem;
 }
 
 .tours-text h4 {
     font-size: 3rem;
     cursor: pointer;
     display: table;
-    font-family: "Poppins Med";
+    font-family: "Poppins Med", sans-serif;
     margin-bottom: 3rem;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
 }
 
@@ -677,7 +665,6 @@ h2 {
     transition: opacity 1s ease-in-out;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
 }
 
@@ -693,8 +680,7 @@ h2 {
     z-index: 33000;
     background: #fff;
     border-left: 1px solid #333333;
-    padding: 0 2%;
-    padding-bottom: 5rem;
+    padding: 2% 0 5rem 2%;
     overflow-x: hidden;
     overflow-y: auto;
     transform: translateX(100%);
@@ -758,7 +744,7 @@ h2 {
 }
 .tour-info-text p span {
     font-size: 2.2rem;
-    font-family: "Poppins Med";
+    font-family: "Poppins Med", sans-serif;
 }
 
 .tour-info__btn {
@@ -790,8 +776,7 @@ h2 {
 }
 .tour-desc p {
     font-size: 1.5rem;
-    padding: 1rem;
-    padding-left: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
 }
 
 .tour-bewertung h3 {
@@ -845,8 +830,7 @@ h2 {
 
 
 .sehenswuerdigkeiten {
-    padding: 10rem 0;
-    padding-bottom: 20rem;
+    padding: 10rem 0 20rem 0;
 }
 
 .swiper-container {
@@ -860,13 +844,12 @@ h2 {
 .card {
     margin: 0 5px;
     cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     min-height: 55rem;
     width: 40rem;
     transition: transform 0.7s ease-in-out;
     -webkit-transition: transform 0.7s ease-in-out;
     -moz-transition: transform 0.7s ease-in-out;
-    -ms-transition: transform 0.7s ease-in-out;
     -o-transition: transform 0.7s ease-in-out;
 }
 
@@ -886,7 +869,7 @@ h2 {
 .swiper-slide h4 {
     font-size: 2.5rem;
     padding: 2rem 3rem;
-    font-family: "Poppins Med";
+    font-family: "Poppins Med", sans-serif;
 }
 
 .swiper-slide p {
@@ -952,7 +935,6 @@ h2 {
     transition: filter 0.6s ease-in-out;
     -webkit-transition: filter 0.6s ease-in-out;
     -moz-transition: filter 0.6s ease-in-out;
-    -ms-transition: filter 0.6s ease-in-out;
     -o-transition: filter 0.6s ease-in-out;
 }
 
@@ -1018,7 +1000,6 @@ h2 {
     left: 15%;
     -webkit-transition: left 0.7s ease-in-out;
     -moz-transition: left 0.7s ease;
-    -ms-transition: left 0.7s ease;
     -o-transition: left 0.7s ease;
 }
 
@@ -1040,7 +1021,6 @@ h2 {
     transition: opacity 0.5s ease-in-out;
     -webkit-transition: opacity 0.5s ease-in-out;
     -moz-transition: opacity 0.5s ease-in-out;
-    -ms-transition: opacity 0.5s ease-in-out;
     -o-transition: opacity 0.5s ease-in-out;
 }
 
@@ -1070,8 +1050,7 @@ h2 {
 ----------------------------------------*/
 
 .news {
-    padding: 20rem 0;
-    padding-left: 16rem;
+    padding: 20rem 0 20rem 16rem;
     background-image: url(../img/startseite/newsletter_bg.png);
     background-size: cover;
     position: relative;
@@ -1127,7 +1106,7 @@ h2 {
     justify-content: space-between;
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.8);
-    font-family: "Poppins Li";
+    font-family: "Poppins Li", sans-serif;
 }
 
 .footer .kontakt-box,
@@ -1303,7 +1282,7 @@ h2 {
     .home-erlebnisse-btn {
         z-index: 20;
         background-color: transparent;
-        margin-top: 0rem;
+        margin-top: 0;
     }
 
     /*Touren*/
@@ -1334,7 +1313,7 @@ h2 {
 
     .see-link {
         padding-left: 10%;
-        margin-top: 0rem;
+        margin-top: 0;
     }
 
     .swiper-wrapper {
@@ -1472,7 +1451,7 @@ h2 {
     }
 
     .tours-text {
-        padding: 0rem 0rem 0rem 0rem;
+        padding: 0 0 0 0;
     }
 
     .footer .icon-box {
@@ -1582,7 +1561,7 @@ h2 {
 .info-beschreibung p {
     font-size: 1.8rem;
     line-height: 150%;
-    font-family: "Poppins Med";
+    font-family: "Poppins Med", sans-serif;
 }
 
 .content-box {
@@ -1629,8 +1608,6 @@ h2 {
     overflow: hidden;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }
 
 .erlebnisse-line {
@@ -1663,8 +1640,6 @@ h2 {
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
 }
 
 .erlebnisse-buttons .prev img,
@@ -1795,8 +1770,6 @@ h2 {
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
 /* tab-menu */
@@ -1819,20 +1792,17 @@ h2 {
     display: inline-block;
     letter-spacing: 0.1rem;
     font-size: 1.5rem;
-    padding: 0 0;
     cursor: pointer;
     padding: 1rem 2rem 1rem 2rem;
     border-radius: 5px 5px 0 0;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
-    -ms-border-radius: 5px 5px 0 0;
-    -o-border-radius: 5px 5px 0 0;
     background-color: rgb(230, 230, 230);
 }
 
 .tab-active {
     background-color: rgb(245, 245, 245) !important;
-    box-shadow: 0px -1px 1.2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -1px 1.2px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 
@@ -1849,14 +1819,12 @@ h2 {
     border-radius: 0 5px 5px 5px;
     -webkit-border-radius: 0 5px 5px 5px;
     -moz-border-radius: 0 5px 5px 5px;
-    -ms-border-radius: 0 5px 5px 5px;
-    -o-border-radius: 0 5px 5px 5px;
     overflow: auto;
 }
 
 .content-active {
     display: block;
-    box-shadow: 0px -.5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -.5px 5px rgba(0, 0, 0, 0.2);
     background-color: rgb(245, 245, 245);
 }
 
@@ -1865,7 +1833,7 @@ h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     letter-spacing: .05rem;
-    font-family: "Poppins Li";
+    font-family: "Poppins Li", sans-serif;
 }
 
 .hotel-gallery-wrap {
@@ -1961,7 +1929,6 @@ h2 {
 .tierwelt-wasser-image {
     position: relative;
     height: 50rem;
-    width: 100%;
     width: 85%;
     background-size: cover;
     background-position: center;
@@ -2011,7 +1978,7 @@ h2 {
     font-size: 2.5rem;
     width: 50%;
     min-width: 45rem;
-    font-family: "Poppins Med";
+    font-family: "Poppins Med", sans-serif;
 }
 
 .pflanzenwelt-info-text,
@@ -2051,7 +2018,6 @@ h2 {
     transform: rotate(180deg);
     -webkit-transition: transform 0.5s ease-in-out;
     -moz-transition: transform 0.5s ease-in-out;
-    -ms-transition: transform 0.5s ease-in-out;
     -o-transition: transform 0.5s ease-in-out;
 }
 
@@ -2114,7 +2080,7 @@ h2 {
 .regenwald-beschreibung p,
 .tropisch-beschreibung p {
     font-size: 1.8rem;
-    font-family: "Poppins Li";
+    font-family: "Poppins Li", sans-serif;
     letter-spacing: .1rem;
 }
 
@@ -2234,7 +2200,7 @@ h2 {
     width: 80%;
     max-width: 1400px;
     margin: auto;
-    box-shadow: 0px 0px 300px rgba(254, 254, 254, 0.2);
+    box-shadow: 0 0 300px rgba(254, 254, 254, 0.2);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
