@@ -1208,11 +1208,12 @@ h2 {
 }
 
 /* resposive media query STARTSETE*/
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1450px) {
     #tour-content {
         width: 80%;
-        
-        
+    }
+    .erlebniss-content-box .content-image:nth-child(3) {
+        top: 5rem;
     }
 }
 @media only screen and (max-width: 1200px) {
@@ -1283,6 +1284,7 @@ h2 {
     }
 
     .erlebniss-content-box .content-image:nth-child(3) {
+        top: 0;
         transform: translateY(0rem);
         -webkit-transform: translateY(0rem);
         -moz-transform: translateY(0rem);
